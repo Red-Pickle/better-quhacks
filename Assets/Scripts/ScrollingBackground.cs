@@ -11,5 +11,6 @@ public class ScrollingBackground : MonoBehaviour
     void Update()
     {
         _img.uvRect = new Rect(_img.uvRect.position + new Vector2(_x, _y) * Time.deltaTime, _img.uvRect.size);
+
     }
 }
