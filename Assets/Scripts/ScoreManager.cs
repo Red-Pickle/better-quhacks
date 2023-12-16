@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+public enum states
+{
+    PREGAME,
+    INGAME,
+    INGAME_SLOW,
+    INGAME_FAST,
+    DEAD,
+    TITLESCREEN
+}
 public class ScoreManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public enum states
-    {
-        INGAME,
-        INGAME_SLOW,
-        INGAME_FAST,
-        DEAD
-    }
+   
 
     public states currentGameState;
     public TextMeshProUGUI scoreText;
-    float score;
+    public float score;
     public int scoreMultiplier;
+    public int highScore;
     void Start()
     {
         score = 0;
@@ -27,7 +31,11 @@ public class ScoreManager : MonoBehaviour
     {
         switch(currentGameState)
         {
-            
+            case states.TITLESCREEN:
+                break;
+            case states.PREGAME:
+                currentGameState = states.INGAME;
+                break;
             case states.INGAME:
                 score += Time.deltaTime*scoreMultiplier; break;
             case states.INGAME_SLOW:
@@ -39,6 +47,10 @@ public class ScoreManager : MonoBehaviour
             default:
                 break;
             
+        }
+        if(score > highScore)
+        {
+            highScore = (int)score;
         }
         scoreText.text = ((int)score).ToString();
     }

@@ -7,6 +7,8 @@ public class Jetpack : MonoBehaviour
 {
     Rigidbody2D rb;
     public float jetpackForce;
+    public ScoreManager sm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,7 @@ public class Jetpack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Space)  && sm.currentGameState!=states.DEAD && sm.currentGameState != states.TITLESCREEN)
             rb.velocity = new Vector2(0, jetpackForce);
     }
 }

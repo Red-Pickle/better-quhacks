@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     public float playerHeight;
     public float jumpForce;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();   
