@@ -1444,6 +1444,8 @@ MonoBehaviour:
   titleButton: {fileID: 536332293}
   exitButton: {fileID: 1245300235}
   sm: {fileID: 1081652379}
+  rb: {fileID: 1489507019}
+  player: {fileID: 1489507018}
 --- !u!1 &1236448870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,6 +2588,7 @@ MonoBehaviour:
   player: {fileID: 1489507018}
   text: {fileID: 864561434}
   highscore: {fileID: 55631099}
+  titleScreen: {fileID: 1230708435}
 --- !u!1 &1708653549
 GameObject:
   m_ObjectHideFlags: 0

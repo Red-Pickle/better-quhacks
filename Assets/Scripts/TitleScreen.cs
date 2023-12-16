@@ -9,6 +9,8 @@ public class TitleScreen : MonoBehaviour
     public Button titleButton;
     public Button exitButton;
     public ScoreManager sm;
+    public Rigidbody2D rb;
+    public GameObject player;
 
     void Start()
     {
@@ -25,6 +27,11 @@ public class TitleScreen : MonoBehaviour
     void PlayGame()
     {
         gameObject.SetActive(false);
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.velocity = Vector3.zero;
+        sm.score = 0;
+        player.transform.eulerAngles = Vector3.zero;
+        player.transform.position = new Vector2(-6, 0);
         sm.currentGameState = states.PREGAME;
     }
 

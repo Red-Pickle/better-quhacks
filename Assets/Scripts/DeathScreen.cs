@@ -14,6 +14,7 @@ public class DeathScreen : MonoBehaviour
     public GameObject player;
     public TextMeshProUGUI text;
     public TextMeshProUGUI highscore;
+    public GameObject titleScreen;
     void Start()
     {
         restart.onClick.AddListener(RestartGame);
@@ -40,6 +41,9 @@ public class DeathScreen : MonoBehaviour
 
     void TitleScreen()
     {
+        gameObject.SetActive(false);
+        titleScreen.SetActive(true);
+        sm.currentGameState = states.TITLESCREEN;
 
     }
 }

@@ -32,6 +32,7 @@ public class ScoreManager : MonoBehaviour
         switch(currentGameState)
         {
             case states.TITLESCREEN:
+                
                 break;
             case states.PREGAME:
                 currentGameState = states.INGAME;
