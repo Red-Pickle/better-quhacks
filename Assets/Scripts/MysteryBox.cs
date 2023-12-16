@@ -15,6 +15,7 @@ public class MysteryBox : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        pm = GameObject.Find("powerup manager").transform.GetComponent<PowerupManager>();
     }
 
     // Update is called once per frame

@@ -9,6 +9,7 @@ public class Jetpack : MonoBehaviour
     public float jetpackForce;
     public ScoreManager sm;
     public ParticleSystem jetpackParticlesPrefab;
+    public float speed = 3f;
 
     
     // Start is called before the first frame update

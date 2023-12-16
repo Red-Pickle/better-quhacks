@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 public class KillPlayer : MonoBehaviour
@@ -10,6 +11,7 @@ public class KillPlayer : MonoBehaviour
     public float deathForce;
     public Button button;
     public GameObject deathScreen;
+    public LaserSpawner asteroidSpawner;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,5 +35,10 @@ public class KillPlayer : MonoBehaviour
     public void ShowDeathScreen()
     {
         deathScreen.SetActive(true);
+        foreach(GameObject a in asteroidSpawner.lasers)
+        {
+            Destroy(a);
+        }
+        asteroidSpawner.lasers.Clear();
     }
 }
