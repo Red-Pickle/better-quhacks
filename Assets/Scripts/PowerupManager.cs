@@ -38,6 +38,7 @@ public class PowerupManager : MonoBehaviour
 
     public void StartPowerUp(powerups powerUp)
     {
+        UnityEngine.Debug.Log(powerUp.ToString());
         if (powerUp == powerups.INVINCIBILITY)
         {
             is_invincible = true;
@@ -48,7 +49,7 @@ public class PowerupManager : MonoBehaviour
         }
         else if (powerUp == powerups.SCORE_BONUS)
         {
-            GameObject.Find("ScoreManager").GetComponent<ScoreManager>().score += 500;
+            GameObject.Find("score mananger").GetComponent<ScoreManager>().score += 500;
         }
 
         in_powerup = powerUp;

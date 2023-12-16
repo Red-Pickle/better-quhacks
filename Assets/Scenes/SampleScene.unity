@@ -394,7 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser_prefab: {fileID: 1755075693068302019, guid: 83e3ef9c0e466d141989f6f88bc09aab, type: 3}
   spawn_bounds_from_center: 4
-  spawn_delay: 1
+  spawn_delay: 2
   sm: {fileID: 1081652379}
   lasers: []
 --- !u!4 &165866182
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser_prefab: {fileID: 1755075693068302019, guid: 83e3ef9c0e466d141989f6f88bc09aab, type: 3}
   spawn_bounds_from_center: 4
-  spawn_delay: 1
+  spawn_delay: 2
   sm: {fileID: 1081652379}
   lasers: []
 --- !u!4 &296791586
@@ -558,6 +558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8eaddd2b1b91d4ab1504de0f65cb64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_invincible: 0
+  in_powerup: 0
 --- !u!4 &367368048
 Transform:
   m_ObjectHideFlags: 0
@@ -2264,6 +2266,7 @@ GameObject:
   - component: {fileID: 1489507024}
   - component: {fileID: 1489507025}
   - component: {fileID: 1489507026}
+  - component: {fileID: 1489507027}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -2470,7 +2473,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489507018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 1d3814a6791a21b47a40ad6b86b2baca, type: 2}
   m_IncludeLayers:
@@ -2498,6 +2501,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!70 &1489507027
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489507018}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.86, y: 1.82}
+  m_Direction: 0
 --- !u!1 &1513833397
 GameObject:
   m_ObjectHideFlags: 0
