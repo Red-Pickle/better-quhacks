@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
@@ -20,6 +19,6 @@ public class Asteroid : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 7 && !GameObject.Find("powerup mananger").GetComponent<PowerupManager>().is_invincible) player.transform.GetComponent<KillPlayer>().Death();
+        if(collision.gameObject.layer == 7 && !GameObject.Find("powerup manager").GetComponent<PowerupManager>().is_invincible) player.transform.GetComponent<KillPlayer>().Death();
     }
 }

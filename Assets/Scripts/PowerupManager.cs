@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 public enum powerups
@@ -15,6 +16,7 @@ public enum powerups
 public class PowerupManager : MonoBehaviour
 {
     public bool is_invincible = false;
+    public TextMeshProUGUI text;
 
     public powerups in_powerup = powerups.NONE;
 
@@ -51,7 +53,7 @@ public class PowerupManager : MonoBehaviour
         {
             GameObject.Find("score mananger").GetComponent<ScoreManager>().score += 500;
         }
-
+        text.text = powerUp.ToString();
         in_powerup = powerUp;
         StartCoroutine(wait_for_end());
     }
@@ -67,5 +69,6 @@ public class PowerupManager : MonoBehaviour
             GameObject.Find("Player").GetComponent<PlayerMovement>().speed -= 10;
         }
         in_powerup = powerups.NONE;
+        text.text = "No Powerup";
     }
 }
