@@ -363,6 +363,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &165866180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 165866182}
+  - component: {fileID: 165866181}
+  m_Layer: 0
+  m_Name: asteriod manager (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &165866181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165866180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11caef9aad93b9642b71865073871aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laser_prefab: {fileID: 1755075693068302019, guid: 83e3ef9c0e466d141989f6f88bc09aab, type: 3}
+  spawn_bounds_from_center: 4
+  spawn_delay: 1
+  sm: {fileID: 1081652379}
+  lasers: []
+--- !u!4 &165866182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165866180}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.3710017, y: 0.01097551, z: 0.00079370104}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &255104835
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,8 +511,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser_prefab: {fileID: 1755075693068302019, guid: 83e3ef9c0e466d141989f6f88bc09aab, type: 3}
   spawn_bounds_from_center: 4
-  spawn_delay: 3
+  spawn_delay: 1
   sm: {fileID: 1081652379}
+  lasers: []
 --- !u!4 &296791586
 Transform:
   m_ObjectHideFlags: 0
@@ -1349,6 +1399,7 @@ MonoBehaviour:
   spawn_bounds_from_center: 4
   spawn_delay: 20
   sm: {fileID: 1081652379}
+  lasers: []
 --- !u!4 &1156979088
 Transform:
   m_ObjectHideFlags: 0
@@ -1531,6 +1582,7 @@ MonoBehaviour:
   spawn_bounds_from_center: 4
   spawn_delay: 10
   sm: {fileID: 1081652379}
+  lasers: []
 --- !u!4 &1180393753
 Transform:
   m_ObjectHideFlags: 0
@@ -1670,7 +1722,7 @@ Transform:
   m_GameObject: {fileID: 1189010576}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.5, z: 0}
+  m_LocalPosition: {x: 0, y: -5.45, z: 0}
   m_LocalScale: {x: 20, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2308,7 +2360,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3405743948716410101}
@@ -2410,6 +2462,7 @@ MonoBehaviour:
   deathForce: 3
   button: {fileID: 1513833399}
   deathScreen: {fileID: 1700040627}
+  asteroidSpawner: {fileID: 296791585}
 --- !u!58 &1489507026
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2690,7 +2743,7 @@ Transform:
   m_GameObject: {fileID: 1606073771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.5, z: 0}
+  m_LocalPosition: {x: 0, y: 5.45, z: 0}
   m_LocalScale: {x: 20, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3018,7 +3071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241e1ec8c9f6afe41a066018a784a9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed_modifier: 1
+  speed_modifier: 3
 --- !u!212 &1826045076
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8186,6 +8239,7 @@ SceneRoots:
   - {fileID: 835909776}
   - {fileID: 1826045077}
   - {fileID: 296791586}
+  - {fileID: 165866182}
   - {fileID: 367368048}
   - {fileID: 1180393753}
   - {fileID: 1156979088}

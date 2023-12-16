@@ -30,6 +30,7 @@ public class LaserSpawner : MonoBehaviour {
 				0.0f), Quaternion.identity));
 			spawn = false;
 			StartCoroutine(wait_for_spawn());
+			
         }
 	}
 

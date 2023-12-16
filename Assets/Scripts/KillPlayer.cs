@@ -37,6 +37,7 @@ public class KillPlayer : MonoBehaviour
         deathScreen.SetActive(true);
         foreach(GameObject a in asteroidSpawner.lasers)
         {
+
             Destroy(a);
         }
         asteroidSpawner.lasers.Clear();

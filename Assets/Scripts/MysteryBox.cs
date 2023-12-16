@@ -31,19 +31,18 @@ public class MysteryBox : MonoBehaviour
         if (collision.gameObject.layer != 7) return;
         Debug.Log("CONNECTION!IFHIOWFHWEO");
         
-        int rand = Random.Range(1, 4);
+        int rand = Random.Range(1, 3);
 
         switch (rand)
         {
+
+  
             case 1:
-                currentPowerUp = powerups.GRAVITY_SUIT;
-                break;
-            case 2:
-                currentPowerUp = powerups.TELEPORTER;
+                currentPowerUp = powerups.INVINCIBILITY;
                 break;
             case 3:
                 currentPowerUp = powerups.SPEEDUP;break;
-            case 4:
+            case 2:
                 currentPowerUp = powerups.SCORE_BONUS; break;
             default: break;
             
